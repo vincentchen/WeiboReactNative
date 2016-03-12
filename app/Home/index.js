@@ -3,10 +3,10 @@
 var React = require('react-native');
 var Icon = require('react-native-vector-icons/FontAwesome');
 var styles = require('./style');
+var TabBar = require('../../component/TabBar');
 
 var {
-  NavigatorIOS,
-  TabBarIOS
+  Navigator
 } = React;
 
 module.exports = React.createClass({
@@ -18,19 +18,19 @@ module.exports = React.createClass({
 
   render: function () {
     return (
-      <TabBarIOS tintColor={'#5ac8fb'} translucent={true}>
-        <Icon.TabBarItem
+      <TabBar tintColor={'#5ac8fb'} translucent={true}>
+        <TabBar.Item
           title="首页"
-          iconName="home"
+          icon="home"
           iconSize={28}
-          selectedIconName="home"
+          selectedIcon="home"
           selected={this.state.selectedTab === 'home'}
           onPress={() => {
             this.setState({
               selectedTab: 'home'
             });
           }}>
-          <NavigatorIOS
+          <Navigator
             navigationBarHidden={true}
             style={styles.navContainer}
             translucent={true}
@@ -39,64 +39,64 @@ module.exports = React.createClass({
               title: '',
               component: require('../Timeline')
             }}/>
-        </Icon.TabBarItem>
-        <Icon.TabBarItem
+        </TabBar.Item>
+        <TabBar.Item
           title="写微博"
-          iconName="plus"
+          icon="plus"
           iconSize={28}
-          selectedIconName="plus"
+          selectedIcon="plus"
           selected={this.state.selectedTab === 'post'}
           onPress={() => {
             this.setState({
               selectedTab: 'post'
             });
           }}>
-          <NavigatorIOS
+          <Navigator
             navigationBarHidden={true}
             style={styles.navContainer}
             initialRoute={{
               title: 'Post',
               component: require('../Post')
             }}/>
-        </Icon.TabBarItem>
-        <Icon.TabBarItem
+        </TabBar.Item>
+        <TabBar.Item
           title="消息"
-          iconName="envelope-o"
+          icon="envelope-o"
           iconSize={28}
-          selectedIconName="envelope-o"
+          selectedIcon="envelope-o"
           selected={this.state.selectedTab === 'message'}
           onPress={() => {
             this.setState({
               selectedTab: 'message'
             });
           }}>
-          <NavigatorIOS
+          <Navigator
             style={styles.navContainer}
             initialRoute={{
               title: '消息',
               component: require('../Message/List')
             }} />
-        </Icon.TabBarItem>
-        <Icon.TabBarItem
+        </TabBar.Item>
+        <TabBar.Item
           title="我"
-          iconName="user"
+          icon="user"
           iconSize={28}
-          selectedIconName="user"
+          selectedIcon="user"
           selected={this.state.selectedTab === 'user'}
           onPress={() => {
             this.setState({
               selectedTab: 'user'
             });
           }}>
-          <NavigatorIOS
+          <Navigator
             navigationBarHidden={true}
             style={styles.navContainer}
             initialRoute={{
               title: '我',
               component: require('../Account')
             }}/>
-        </Icon.TabBarItem>
-      </TabBarIOS>
+        </TabBar.Item>
+      </TabBar>
     );
   }
 });
