@@ -19,7 +19,7 @@
 - `git clone git@github.com:SFantasy/WeiboReactNative.git`
 - 执行 `cd WeiboReactNative && npm install`
 - 将 `config.example.js` 中的 `app_key` 和 `app_secret` 修改为你自己申请的, 并将文件重命名为 `config.js`
-- 在 XCode 中打开 `Yijian.xcodeproj`
+- 在 XCode 中打开 `Vincent.xcodeproj`
 - Command + R
 
 ### 在设备上运行

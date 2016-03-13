@@ -27,7 +27,7 @@ const OAUTH_URL = [
   '&redirect_uri=' + config.redirect_uri
 ].join('');
 
-const Yijian = React.createClass({
+const Vincent = React.createClass({
 
   async _loadInitialState () {
     try {
@@ -121,4 +121,4 @@ const Yijian = React.createClass({
   }
 });
 
-AppRegistry.registerComponent('Yijian', () => Yijian);
+AppRegistry.registerComponent('Vincent', () => Vincent);

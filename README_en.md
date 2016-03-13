@@ -1,4 +1,4 @@
-Yijian
+Vincent
 ---
 
 > Developing, welcome to watch, star && fork.
@@ -15,7 +15,7 @@ Another Weibo client made with react-native
 - `git clone git@github.com:SFantasy/WeiboReactNative.git`
 - Run `cd WeiboReactNative && npm install`
 - Change `app_key` and `app_secret` in the `config.example.js` and rename it to `config.js`
-- Open `Yijian.xcodeproj` with XCode
+- Open `Vincent.xcodeproj` with XCode
 - Command + R
 
 ### Run on device
